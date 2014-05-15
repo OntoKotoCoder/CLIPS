@@ -57,8 +57,8 @@
 	?new_possible_value <- (possible-value (zone ?zone) (value ?value) (column ?column) (row ?row))
 	(not (possible-value (zone ?zone) (value ?value)))
 	(not (field (value ?value) (zone ?zone)))
-	(not (field (value ?value) (zone ?row)))
-	(not (field (value ?value) (zone ?column)))
+	(not (field (value ?value) (row ?row)))
+	(not (field (value ?value) (column ?column)))
 	=>
 	(assert (field (value ?value) (column ?column) (row ?row) (zone ?zone)))
 	(retract ?new_possible_value))
@@ -68,8 +68,8 @@
 	?new_possible_value <- (possible-value (zone ?zone) (value ?value) (column ?column) (row ?row))
 	(not (possible-value (column ?column) (value ?value)))
 	(not (field (value ?value) (zone ?zone)))
-	(not (field (value ?value) (zone ?row)))
-	(not (field (value ?value) (zone ?column)))
+	(not (field (value ?value) (row ?row)))
+	(not (field (value ?value) (column ?column)))
 	=>
 	(assert (field (value ?value) (column ?column) (row ?row) (zone ?zone)))
 	(retract ?new_possible_value))
@@ -79,8 +79,8 @@
 	?new_possible_value <- (possible-value (zone ?zone) (value ?value) (column ?column) (row ?row))
 	(not (possible-value (row ?row) (value ?value)))
 	(not (field (value ?value) (zone ?zone)))
-	(not (field (value ?value) (zone ?row)))
-	(not (field (value ?value) (zone ?column)))
+	(not (field (value ?value) (row ?row)))
+	(not (field (value ?value) (column ?column)))
 	=>
 	(assert (field (value ?value) (column ?column) (row ?row) (zone ?zone)))
 	(retract ?new_possible_value))
